@@ -1,3 +1,5 @@
+// app/api/chat/route.ts
+
 import { openai } from "@ai-sdk/openai";
 import {
   experimental_createMCPClient as createMCPClient,
@@ -30,7 +32,6 @@ export async function POST(req: NextRequest) {
       messages,
       system: `You are a productivity assistant. Use the following tools to help users manage their tasks:
           1. Google Calendar: For scheduling appointments and events
-          Always respond in polite Japanese.
           
           Format your responses using Markdown, especially utilizing these elements:
           - Headings (#, ##)
