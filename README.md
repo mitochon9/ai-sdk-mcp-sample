@@ -34,22 +34,22 @@ pnpm install
 ```
 
 2. Set up the Google Calendar MCP server:
-   
+
    This project uses [google-calendar-mcp](https://github.com/nspady/google-calendar-mcp) to connect with Google Calendar. Follow these steps to set it up:
 
    ```bash
    # Clone the Google Calendar MCP repository
    git clone https://github.com/nspady/google-calendar-mcp.git
    cd google-calendar-mcp
-   
+
    # Install dependencies and build
    npm install
-   
+
    # Set up Google OAuth credentials
    # 1. Create a Google Cloud project and enable the Calendar API
    # 2. Create OAuth 2.0 credentials (Desktop app)
    # 3. Download and save as gcp-oauth.keys.json in the root directory
-   
+
    # Run the authentication flow
    npm run auth
    ```
@@ -101,6 +101,7 @@ The core functionality is implemented in `app/api/chat/route.ts`, which:
 3. Streams the AI responses back to the user interface
 
 The application uses a system prompt that instructs the AI to:
+
 - Respond in polite Japanese
 - Use markdown formatting
 - Use "primary" as the calendar ID for all operations
@@ -129,5 +130,4 @@ For those looking to learn more about the technologies used in this project:
 
 1. [AI SDK documentation](https://sdk.vercel.ai/docs)
 2. [OpenAI API documentation](https://platform.openai.com/docs/api-reference)
-3. [MCP documentation](https://sdk.vercel.ai/docs/ai-sdk/machine-control-protocol)
-4. [Next.js documentation](https://nextjs.org/docs)
+3. [Next.js documentation](https://nextjs.org/docs)
